@@ -3,7 +3,7 @@
 
 var SearchTags = {
     Category: {
-        "SCP-JP": "_scp-jp",
+        "BR-JP": "_br-jp",
         "Tale-JP": "_tale-jp",
         "GOI-JP": "_goi-format-jp",
         "翻訳（英語）": "_en",

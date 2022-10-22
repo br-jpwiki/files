@@ -6,7 +6,7 @@ var PageSetting = new Object();
 PageSetting.getParent = true;
 PageSetting.currentParam = decodeURIExtension(document.referrer);
 if ((!PageSetting.currentParam)||(new URL(PageSetting.currentParam).pathname.length<=1)) {
-    PageSetting.currentParam = "http://scp-jp-sandbox3.wikidot.com/draft-list";
+    PageSetting.currentParam = "http://japan-backrooms-sandbox.wikidot.com/draft-list";
     PageSetting.getParent = false;
 }
 PageSetting.myPage = (function () {
