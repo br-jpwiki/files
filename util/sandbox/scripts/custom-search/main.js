@@ -3,9 +3,13 @@
 
 var SearchTags = {
     Category: {
-        "BR-JP": "_br-jp",
-        "Tale-JP": "_tale-jp",
-        "GOI-JP": "_goi-format-jp",
+        "通常階層": "_normal-levels",
+        "副次階層": "_sub-levels",
+        "例外階層": "_exception-levels",
+        "実体": "_entities",
+        "物品": "_objects",
+        "発見された記録": "_found-logs",
+        "エッセイ": "_essays",
         "翻訳（英語）": "_en",
         "翻訳（その他）": "_ru,_ko,_cn,_fr,_pl,_es,_th,_de,_it,_ua,_pt-br,_cz,_otherlang",
         "その他": "_others",
@@ -14,15 +18,15 @@ var SearchTags = {
 
     /*ジャンル設定*/
     Genre: {
-        "Joke": "_joke",
-        "ホラー": "_horror",
-        "SF": "_sf",
-        "オカルト・都市伝説": "_occult",
-        "サスペンス": "_suspense",
-        "感動系": "_excitement",
-        "シュール": "_sur",
-        "メタフィクション": "_metafiction",
-        "コミカル": "_comical",
+        "超現実": "_surreality",
+        "郷愁 ": "_nostalgia",
+        "怪談 ": "_ghost-story",
+        "クリーピーパスタ ": "_creepy-pasta",
+        "屋内 ": "_indoor",
+        "屋外 ": "_outdoor",
+        "フォーマットスクリュー": "_format-screw",
+        "都市伝説": "_urban-legend",
+        "居住可能": "_habitable",
         "既存記事改稿": "_reforming-g",
         "日→外国語翻訳": "_translationjpto",
         "コンテスト": "_contest",
