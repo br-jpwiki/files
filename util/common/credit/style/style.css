@@ -161,6 +161,15 @@
     display: flex;
 }
 
+.creditBottomRate,
+.modalbox-ratemodule {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 1em;
+}
+
+
 .creditRate {
     display: -webkit-inline-flex;
     display: inline-flex;
