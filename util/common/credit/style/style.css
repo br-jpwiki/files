@@ -108,21 +108,6 @@
     border-radius: 5px 5px 0 0;
 }
 
-.modalbox .modalbox-title.heritage h2 {
-    display: flex;
-    align-items: center;
-}
-
-.modalbox .modalbox-title.heritage h2:before {
-    content: "";
-    background: url("http://scp-jp.wdfiles.com/local--files/heritage-collection-jp/heritage-emblem.png") no-repeat;
-    background-size: 40px, 40px;
-    display: inline-flex;
-    width: 40px;
-    height: 40px;
-    margin-right: 0.3em;
-}
-
 .modalbox .credit {
     margin: 2em;
     word-wrap: break-word;
@@ -164,22 +149,6 @@
     display: block;
     text-align: right;
 }
-.Dendo {
-    display: none;
-    justify-content: center;
-}
-.Dendo .heritage-rating-module {
-    float: right;
-    display: -webkit-inline-flex;
-    display: inline-flex;
-    -webkit-flex-direction: row;
-    flex-direction: row;
-    vertical-align: top;
-    margin: 0;
-}
-.modalbox > .Dendo {
-    padding-bottom: 0.5em;
-}
 
 .modalbox .modalbox-ratemodule {
     display: flex;
@@ -188,34 +157,8 @@
     margin: 0.5em 0;
 }
 
-.creditBottomRate,
-.modalbox > .Dendo,
-.modalbox-ratemodule {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: 1em;
-}
-
 .modalbox .modalbox-ratemodule .page-rate-widget-box {
     display: flex;
-}
-
-.modalbox.heritage {
-    background: linear-gradient(to bottom, #fff6f0, #fff);
-    border: #633 solid 7px;
-    box-shadow: 2px 2px 6px rgba(204, 192, 102, 0.8), -2px -2px 6px rgba(204, 192, 102, 0.8);
-}
-
-#u-credit-otherwise .modalbox.heritage {
-    background: linear-gradient(to bottom, #fff6f0, #fff);
-    box-shadow: 2px 2px 6px rgba(204, 192, 102, 0.8), -2px -2px 6px rgba(204, 192, 102, 0.8);
-}
-
-.modalbox.heritage .modalbox-title {
-    background: linear-gradient(to bottom, #633, #966);
-    color: #fff;
-    border-radius: 0;
 }
 
 .creditRate {
@@ -232,23 +175,6 @@
 .creditRate .page-rate-widget-box {
     display: inline-flex;
     align-items: center;
-}
-
-.creditRate .heritage-rating-module {
-    float: right;
-    display: -webkit-inline-flex;
-    display: inline-flex;
-    -webkit-flex-direction: row;
-    flex-direction: row;
-    vertical-align: top;
-    margin: 0;
-    border-radius: 5px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    padding: 0 5px;
-}
-
-.creditRate .heritage-rating-module .page-rate-widget-box {
-    margin: 0;
 }
 
 .creditRate .audio-img-block {
@@ -298,48 +224,6 @@
 }
 .creditButton a:hover {
     color: #966;
-}
-
-.heritage-rating-module ~ .creditButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #633;
-    border: solid 1px #ccc066;
-    border-radius: 5px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    padding: 0 5px 0 0;
-    margin-left: 5px;
-}
-
-.heritage-rating-module ~ .creditButton a {
-    margin-left: 0;
-    margin-right: -5px;
-}
-.heritage-rating-module ~ .creditButton a:hover {
-    color: #966;
-}
-
-.heritage-rating-module .heritage-emblem {
-    width: 20px;
-    height: 20px;
-}
-
-.heritage-rating-module .heritage-emblem a {
-    width: 20px;
-    height: 20px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.heritage-rating-module .heritage-emblem img {
-    width: 20px;
-    height: 20px;
-}
-
-.heritage-rating-module .page-rate-widget-box span {
-    box-sizing: content-box;
 }
 
 .modalbox .page-rate-widget-box {
@@ -421,11 +305,6 @@ div.page-rate-widget-box .rate-points {
     max-width: none;
 }
 
-.modalbox .heritage-rating-module .page-rate-widget-box .rateup,
-.modalbox .heritage-rating-module .page-rate-widget-box .ratedown {
-    box-sizing: border-box;
-}
-
 .credit-license {
     width: 100%;
     height: 5px;
@@ -441,11 +320,6 @@ div.page-rate-widget-box .rate-points {
 }
 
 @media (max-width: 479px) {
-    .creditBottomRate .Dendo {
-        position: absolute;
-        top: 0;
-        left: 2em;
-    }
     .credit-license {
         margin-top: 4px;
         height: 1.5px;
