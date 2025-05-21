@@ -29,6 +29,7 @@
     /* Backrooms JP における Creditmodal のスタイル変数 */
  
     --creditmodal-fader-color: var(--popup-fader-color);
+    --creditmodal-fader-blur: var(--general-blur);
     --creditmodal-background-color: var(--popup-background-color);
     --creditmodal-text-color: var(--popup-text-color);
     --creditmodal-title-background: rgba(var(--popup-title-background-color));
@@ -374,6 +375,8 @@ div.creditRate + br + span[style*="margin-top: -0.7rem"] {
 .fader {
     position: absolute;
     background-color: rgba(var(--creditmodal-fader-color));
+    -webkit-backdrop-filter: blur(var(--creditmodal-fader-blur));
+    backdrop-filter: blur(var(--creditmodal-fader-blur));
     width: 100%;
     height: 100%;
     top: 0;
