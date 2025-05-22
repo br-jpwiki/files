@@ -115,6 +115,7 @@ by Ambersight
 }
  
 .scp-image-caption p {
+    --wght: 700;
     font-size: 0.8rem;
     font-weight: 700;
 }
