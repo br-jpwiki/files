@@ -36,6 +36,7 @@ by Ambersight
 }
  
 .image-block-caption p {
+    --wght: 700;
     font-size: 0.8rem;
     font-weight: 700;
 }
@@ -64,17 +65,21 @@ by Ambersight
 }
  
 @media (max-width: 900px) {
-    .scp-image-block.block-left,
-    .scp-image-block.block-right {
+    .image-block.image-block-left,
+    .image-block.image-block-right {
         max-width: 100%;
     }
  
-    .scp-clear-true.scp-image-block {
+    .image-block-clear-true.image-block {
         width: 100% !important;
         float: none;
         clear: both;
         margin-left: auto;
         margin-right: auto;
+    }
+ 
+    .image-block-clear-true.image-block img {
+        min-width: 100%;
     }
  
 }
@@ -149,6 +154,10 @@ by Ambersight
         clear: both;
         margin-left: auto;
         margin-right: auto;
+    }
+ 
+        .scp-clear-true.scp-image-block img {
+        min-width: 100%;
     }
  
 }
