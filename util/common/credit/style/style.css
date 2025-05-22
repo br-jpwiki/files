@@ -1,37 +1,263 @@
 @import url("http://cdnjs.cloudflare.com/ajax/libs/cc-icons/1.2.1/css/cc-icons.min.css");
+ 
+/*
+ 
+From Super Liminal
+Wikidot Theme 2024
+by Ambersight
+ 
+*/
+ 
+:root {
 
-#u-credit-view,
-#u-credit-otherwise {
+    /* Backrooms JP における Ratingmodule のスタイル変数 */
+ 
+    --rating-background-color: var(--general-light-background-color);
+    --rating-border-color: var(--general-dark-border-color);
+    --rating-text-color: var(--general-light-text-color);
+    --rating-rateup-color: var(--accept-color);
+    --rating-ratedown-color: var(--warning-color);
+    --rating-cancel-color: var(--cancel-color);
+    --rating-rateup-text-color: var(--accept-text-color);
+    --rating-ratedown-text-color: var(--warning-text-color);
+    --rating-cancel-text-color: var(--neutral-text-color);
+ 
+    --rating-module-button-color: var(--rating-text-color);
+    --rating-module-button-mask: var(--vote-plus-mask);
+    --rating-module-button-color: var(--rating-rateup-text-color);
+ 
+    --rating-background: rgba(var(--rating-background-color));
+    --rating-font: var(--body-font);
+ 
+    /* Backrooms JP における CreditRateModule のスタイル変数 */
+ 
+    --rating-info-color: var(--dark-color-3);
+    --rating-info-text-color: var(--light-color-2);
+ 
+    /* Backrooms JP における Creditmodal のスタイル変数 */
+ 
+    --creditmodal-fader-color: var(--popup-fader-color);
+    --creditmodal-fader-blur: var(--general-blur);
+    --creditmodal-background-color: var(--popup-background-color);
+    --creditmodal-text-color: var(--popup-text-color);
+    --creditmodal-title-background: rgba(var(--popup-title-background-color));
+    --creditmodal-title-text-color: var(--popup-title-text-color);
+    --creditmodal-border: rgba(var(--popup-border-color)) solid 0.2rem;
+    --creditmodal-tip-color: var(--popup-tip-color);
+    --creditmodal-tip-content: var(--popup-tip-content);
+    --creditmodal-content-font-size: var(--content-font-size);
+    --creditmodal-title-font: var(--title-font);
+}
+ 
+ 
+/* 通常の評価モジュール */
+ 
+ 
+ul.creditRate {
+    margin: 0;
+    display: block;
+    padding: 0;
+}
+ 
+.creditRate > li {
+    line-height: 1.5;
+}
+ 
+div.page-rate-widget-box {
+    display: inline-flex;
+    background: rgba(var(--rating-background-color));
+    color: rgba(var(--rating-text-color));
+    border: none;
+    padding: 0;
+    margin: 0.2rem 0;
+    border-radius: 0;
+    border-bottom: rgba(var(--rating-border-color)) solid 0.15rem;
+}
+ 
+div.page-rate-widget-box .rate-points {
+    color: rgba(var(--rating-text-color));
+    background: transparent;
+    display: flex;
+    align-items: center;
+    font-size: 0.7rem;
+    padding: 0 0.5rem;
+    grid-gap: 0.1rem;
+}
+ 
+div.page-rate-widget-box .rate-points .number {
+    font-size: 1rem;
+}
+ 
+div.page-rate-widget-box .btn {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+ 
+div.page-rate-widget-box a {
+    background: transparent;
+    text-decoration: none;
+    border: none;
+    font-family: var(--rating-font);
+    font-size: 0;
+    display: flex;
     width: 100%;
     height: 100%;
-    top: 0px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: fixed;
-    display: flex;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    z-index: 10;
+    padding: 0;
+    transition: background-color var(--general-transition-time-slow);
+    margin: 0;
 }
-#u-credit-view:not(:target),
-#u-credit-otherwise:not(:target) {
-    opacity: 0;
-    display: none;
-}
-#u-credit-view:target,
-#u-credit-otherwise:target {
-    opacity: 1;
+ 
+div.page-rate-widget-box a::before {
+    --rating-module-button-mask: none;
+    --rating-module-button-color: var(--rating-text-color);
+    content: "";
     display: block;
-    animation-duration: 0.5s;
-    animation-name: fade-in;
-    -moz-animation-duration: 0.5s;
-    -moz-animation-name: fade-in;
-    -webkit-animation-duration: 0.5s;
-    -webkit-animation-name: fade-in;
+    width: 100%;
+    height: 100%;
+    -webkit-mask-image: var(--rating-module-button-mask);
+            mask-image: var(--rating-module-button-mask);
+    -webkit-mask-position: center;
+            mask-position: center;
+    -webkit-mask-size: 40%;
+            mask-size: 40%;
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+    background: rgba(var(--rating-module-button-color));
 }
+ 
+div.page-rate-widget-box .rateup a:is(:hover) {
+    background: rgba(var(--rating-rateup-color));
+}
+ 
+div.page-rate-widget-box .rateup a::before {
+    --rating-module-button-mask: var(--vote-plus-mask);
+}
+ 
+div.page-rate-widget-box .rateup a:is(:hover)::before {
+    --rating-module-button-color: var(--rating-rateup-text-color);
+}
+ 
+div.page-rate-widget-box .ratedown a:is(:hover) {
+    background: rgba(var(--rating-ratedown-color));
+}
+ 
+div.page-rate-widget-box .ratedown a::before {
+    --rating-module-button-mask: var(--vote-minus-mask);
+}
+ 
+div.page-rate-widget-box .ratedown a:is(:hover)::before {
+    --rating-module-button-color: var(--rating-ratedown-text-color);
+}
+ 
+div.page-rate-widget-box .cancel a:is(:hover) {
+    background: rgba(var(--rating-cancel-color));
+}
+ 
+div.page-rate-widget-box .cancel a::before {
+    --rating-module-button-mask: var(--vote-cancel-mask);
+}
+ 
+div.page-rate-widget-box .cancel a:is(:hover)::before {
+    --rating-module-button-color: var(--rating-cancel-text-color);
+}
+ 
+ 
+/* クレジット付き評価モジュール */
+ 
+ 
+.creditRate {
+    float: right;
+}
+ 
+.creditRate .rateBox {
+    display: inline-flex;
+}
+ 
+div.rate-box-with-credit-button {
+    display: inline-flex;
+    background: rgba(var(--rating-background-color));
+    color: rgba(var(--rating-text-color));
+    border: none;
+    padding: 0;
+    margin: 0.2rem 0;
+    border-radius: 0;
+    border-bottom: rgba(var(--rating-border-color)) solid 0.15rem;
+}
+ 
+div.rate-box-with-credit-button div.page-rate-widget-box,
+div.creditButton p {
+    display: contents;
+    border: none;
+}
+ 
+div.rate-box-with-credit-button div.creditButton {
+    display: block;
+}
+ 
+div.rate-box-with-credit-button div.creditButton {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+@supports (display:grid) {
+    .page-rate-widget-box .rate-points,
+    .page-rate-widget-box .rateup,
+    div.page-rate-widget-box .rateup a,
+    .page-rate-widget-box .ratedown,
+    div.page-rate-widget-box .ratedown a,
+    .page-rate-widget-box .cancel,
+    div.page-rate-widget-box .cancel a {
+        background-color: unset;
+        border: unset;
+    }
+}
+
+div.creditButton a {
+    background: transparent;
+    text-decoration: none;
+    border: none;
+    font-family: var(--rating-font);
+    font-size: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    transition: background-color var(--general-transition-time-slow);
+    margin: 0;
+}
+ 
+div.creditButton a::before {
+    --rating-module-button-mask: var(--vote-info-mask);
+    --rating-module-button-color: var(--rating-text-color);
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-mask-image: var(--rating-module-button-mask);
+            mask-image: var(--rating-module-button-mask);
+    -webkit-mask-position: center 40%;
+            mask-position: center 40%;
+    -webkit-mask-size: 27.5%;
+            mask-size: 27.5%;
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+    background: rgba(var(--rating-module-button-color));
+}
+ 
+div.creditButton a:is(:hover) {
+    background: rgba(var(--rating-info-color));
+}
+ 
+div.creditButton a:is(:hover)::before {
+    --rating-module-button-color: var(--rating-info-text-color);
+}
+ 
+div.creditRate + br + span[style*="margin-top: -0.7rem"] {
+    margin: -0.2rem 0.5rem 0.2rem 0 !important;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+ 
 @-webkit-keyframes fade-in {
     from {
         opacity: 0;
@@ -48,10 +274,117 @@
         opacity: 1;
     }
 }
-
+ 
+ 
+/* ノンレートクレジット付き評価モジュール */
+ 
+ 
+@supports (display:grid) {
+#page-content  .creditRate.no-rate .rate-box-with-credit-button {
+    background: none;
+    border: none;
+    box-shadow: none;
+    height: 3em;
+    justify-content: flex-end;
+}
+}
+ 
+@supports (display:grid) {
+    #page-content .creditRate.no-rate .rate-box-with-credit-button>.page-rate-widget-box {
+        display: none;
+    }
+}
+ 
+.creditRate.no-rate .rate-box-with-credit-button .creditButton {
+    width: 9rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+#page-content .creditRate.no-rate .rate-box-with-credit-button>.creditButton:hover {
+    background: none;
+}
+ 
+.creditRate.no-rate .creditButton a {
+    display: inline-flex;
+    background: rgba(var(--rating-background-color));
+    color: rgba(var(--rating-text-color));
+    border: none;
+    padding: 0;
+    margin: 0.2rem 0;
+    border-radius: 0;
+    border-bottom: rgba(var(--rating-border-color)) solid 0.15rem;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+ 
+.creditRate.no-rate .creditButton a:is(:hover) {
+    background: rgba(var(--rating-info-color));
+}
+ 
+.creditRate.no-rate div.creditButton a::before {
+    width: 1.6rem;
+}
+ 
+.creditRate.no-rate .creditButton a:after {
+    content: "クレジットを表示";
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgba(var(--rating-text-color));
+    text-align: center;
+    margin: 0 auto 1px auto;
+}
+ 
+.creditRate.no-rate div.creditButton a:is(:hover)::before,
+.creditRate.no-rate div.creditButton a:is(:hover)::after {
+    color: rgba(var(--rating-info-text-color));
+}
+ 
+ 
+/* クレジット付き評価モジュール modalbox */
+ 
+ 
+#u-credit-view,
+#u-credit-otherwise {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    z-index: 10;
+}
+ 
+#u-credit-view:not(:target),
+#u-credit-otherwise:not(:target) {
+    opacity: 0;
+    display: none;
+}
+ 
+#u-credit-view:target,
+#u-credit-otherwise:target {
+    opacity: 1;
+    display: block;
+    animation-duration: 0.5s;
+    animation-name: fade-in;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-name: fade-in;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-name: fade-in;
+}
+ 
 .fader {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(var(--creditmodal-fader-color));
+    -webkit-backdrop-filter: blur(var(--creditmodal-fader-blur));
+    backdrop-filter: blur(var(--creditmodal-fader-blur));
     width: 100%;
     height: 100%;
     top: 0;
@@ -59,6 +392,7 @@
     left: 0;
     right: 0;
 }
+ 
 .fader iframe {
     position: absolute;
     width: 100%;
@@ -68,266 +402,147 @@
     left: 0;
     right: 0;
 }
-.modalcontainer {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 400px;
-    height: 200px;
-    margin: auto;
-}
-.modalbox {
-    position: relative;
-    min-width: 400px;
-    min-height: 200px;
-    padding-bottom: 1em;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 6px rgba(102, 0, 0, 0.5);
-}
-#u-credit-otherwise .modalbox {
-    background-color: #fff;
-}
-#u-credit-view .modalbox:after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 30px;
-}
-
-.modalbox .modalbox-title {
+ 
+div.modalcontainer {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
     width: 100%;
-    min-height: 50px;
-    background: #ccc;
-    margin-bottom: 14px;
-    border-radius: 5px 5px 0 0;
+    height: 100%;
+    max-width: unset;
+    pointer-events: none;
 }
-
-.modalbox .credit {
-    margin: 2em;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+ 
+div.modalbox {
+    max-height: unset;
+    max-width: 80ch;
+    top: initial;
+    left: initial;
+    position: relative;
+    flex-basis: calc(100% - 2rem);
+    background: rgba(var(--creditmodal-background-color));
+    box-sizing: border-box;
+    border: var(--creditmodal-border);
+    color: rgba(var(--creditmodal-text-color));
+    border-radius: 0;
+    box-shadow: unset;
+    padding: 0;
+    pointer-events: auto;
+    font-size: var(--creditmodal-content-font-size);
 }
-.modalbox .credit:not(:first-child) {
-    margin-top: 0;
+ 
+@supports (display:grid) {
+    #page-content div.modalbox {
+        max-width: 80ch;
+    }
 }
-.modalbox .credit:not(:last-child) {
-    margin-bottom: 0;
+ 
+div.modalbox::after {
+    position: absolute;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 5rem;
+    height: 2.5rem;
+    bottom: -2.2rem;
+    right: 0;
+    width: 100%;
+    background: transparent;
+    color: rgba(var(--creditmodal-tip-color));
+    display: flex;
+    font-weight: 700;
+    justify-content: center;
+    align-items: flex-end;
+    content: var(--creditmodal-tip-content);
+    font-size: 0.8rem;
+    pointer-events: none;
 }
-.modalbox .credit + .credit {
-    margin-bottom: 0.5em;
-}
-.modalbox .credit.otherwise {
-    overflow-y: scroll;
-    height: 150px;
-}
-#u-credit-view .credit-back {
+ 
+div.modalbox > hr {
     display: none;
 }
-#u-credit-otherwise .creditBottomRate {
-    display: none;
+ 
+div.modalbox .modalbox-title {
+    background: var(--creditmodal-title-background);
+    padding: 0.5rem 1rem;
+    text-align: left;
+    display: block;
+    line-height: 1.5;
 }
-
-@media (max-width: 767px) {
-    #u-credit-view {
-        height: 100%;
-        top: 0;
-    }
-    .modalcontainer {
-        min-width: 300px;
-    }
-    .modalbox {
-        min-width: 300px;
-    }
+ 
+div.modalbox .modalbox-title h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: rgba(var(--creditmodal-title-text-color));
+    font-family: var(--creditmodal-title-font);
 }
+ 
+div.modalbox .credit {
+    padding: 0.5rem 1rem;
+    margin: 0;
+    overflow-y: auto;
+    height: auto;
+}
+ 
+div.modalbox .credit:nth-child(2) {
+    padding: 0.5rem 1rem;
+    margin: 0;
+    max-height: 47.5vh;
+    overflow-y: auto;
+    height: auto;
+    min-height: 5rem;
+}
+ 
 #u-credit-view-button {
     display: block;
     text-align: right;
 }
-
+ 
 .modalbox .modalbox-ratemodule {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0.5em 0;
 }
-
+ 
 .modalbox .modalbox-ratemodule .page-rate-widget-box {
     display: flex;
 }
-
-.creditBottomRate,
-.modalbox-ratemodule {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: 1em;
+ 
+div.creditBottomRate {
+    height: auto;
+    border-top: rgba(var(--modalbox-text-color), 0.18) solid 0.15rem;
+    padding: 0.5rem 0;
 }
-
-
-.creditRate {
-    display: -webkit-inline-flex;
-    display: inline-flex;
-    -webkit-flex-direction: row;
-    flex-direction: row;
-    align-items: center;
-    float: right;
-    margin-bottom: 10px;
-    margin-right: 2em;
+ 
+div.creditBottomRate div.page-rate-widget-box {
+    background: rgba(var(--creditmodal-title-text-color));
 }
-
-.creditRate .page-rate-widget-box {
-    display: inline-flex;
-    align-items: center;
-}
-
-.creditRate .audio-img-block {
-    top: 0;
-}
-
-.rate-box-with-credit-button {
-    background-color: transparent !important;
-    border-radius: 5px;
-    box-shadow: none;
-    min-width: 150px;
-    height: 18px;
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.rate-box-with-credit-button .creditButton {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 24px;
-    height: 16px;
-    background-color: #633;
-    border: 1px solid #633;
-    border-radius: 5px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    margin-left: 5px;
-}
-
-.creditRate .rateBox {
-    display: inline-flex;
-}
-
-.creditButton {
-    font-size: 0.8em;
-}
-.creditButton a {
-    width: 24px;
-    margin-left: 0;
-    color: #fff6f0;
-    border-left: none;
-    text-align: center;
-    text-decoration: none;
-    font-size: 11px;
-}
-.creditButton a:hover {
-    color: #966;
-}
-
-.modalbox .page-rate-widget-box {
-    margin-right: 0;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.credit-back .back a {
+ 
+.creditRate.creditModule.no-rate ~ #u-credit-view .creditBottomRate > div:nth-of-type(2),
+.creditRate.creditModule.no-rate ~ #u-credit-otherwise .creditBottomRate > div:nth-of-type(2) {
     display: none;
 }
-.credit-back .back a::before {
-    content: "クレジット";
+ 
+#u-credit-view .credit-back {
+    display: none;
 }
-
-.page-rate-widget-box span {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    height: 18px;
-    box-sizing: border-box;
-}
-
-div.page-rate-widget-box .rate-points {
-    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Meiryo, メイリオ, Osaka, "MS PGothic", arial,
-        helvetica, sans-serif;
-    font-weight: bolder;
-    font-size: 11px;
-}
-
-.page-rate-widget-box .cancel {
-    padding: 0 2px 0 3px;
-}
-
-.page-rate-widget-box .cancel a {
-    font-family: "FontAwesome";
-    font-weight: 400;
-    font-size: 0;
-    color: #fff6f0;
-    padding: 3px 5px;
-    height: 12px;
-}
-
-.page-rate-widget-box .cancel a:hover {
-    color: #966;
-}
-
-.page-rate-widget-box .cancel a:before {
-    content: "\f00d";
-    font-size: 10px;
-}
-
-.page-rate-widget-box .rateup a,
-.page-rate-widget-box .ratedown a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0;
-    font-family: "FontAwesome";
-    font-weight: 400;
-    padding: 2px 5px;
-    height: 16px;
-    box-sizing: border-box;
-}
-
-.page-rate-widget-box .rateup a:before {
-    content: "\f067";
-    font-size: 10px;
-}
-
-.page-rate-widget-box .ratedown a:before {
-    content: "\f068";
-    font-size: 10px;
-}
-
-#page-content div.creditRate,
-#page-content div.creditRate div {
-    max-width: none;
-}
-
+ 
 .credit-license {
     width: 100%;
     height: 5px;
     display: flex;
     justify-content: flex-end;
 }
-
+ 
 .credit-license a.cc {
     margin-right: 1em;
     font-size: 30px;
     color: #444;
     text-decoration: none;
 }
-
+ 
 @media (max-width: 479px) {
     .credit-license {
         margin-top: 4px;
@@ -336,9 +551,4 @@ div.page-rate-widget-box .rate-points {
     .credit-license a.cc {
         font-size: 20px;
     }
-}
-
-.page-rate-widget-box {
-    display: inline-flex;
-    margin: 0;
 }

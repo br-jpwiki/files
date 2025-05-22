@@ -1,0 +1,163 @@
+:root {
+ 
+    /* Backrooms JP における Imageblock のスタイル変数 */
+ 
+    --imageblock-border-width: 0.15rem;
+    --imageblock-caption-background-color: var(--general-light-background-color);
+    --imageblock-caption-text-color: var(--general-light-text-color);
+    --imageblock-shadow-color: 0, 0, 0, 0;
+    --imageblock-border-color: var(--general-medium-border-color);
+ 
+}
+ 
+/*
+
+From Super Liminal
+Wikidot Theme 2024
+by Ambersight
+
+*/
+
+.image-block {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0.2rem 0.2rem 0.4rem rgba(var(--imageblock-shadow-color));
+    clear: both;
+    border: rgba(var(--imageblock-border-color)) var(--imageblock-border-width) solid;
+    max-width: 100%;
+}
+ 
+.image-block-caption {
+    background: rgba(var(--imageblock-caption-background-color));
+    color: rgba(var(--imageblock-caption-text-color));
+    padding: 0.2em 1em;
+    text-align: center;
+    width: auto !important;
+}
+ 
+.image-block-caption p {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+ 
+#page-content .image-block-caption p:first-child {
+    margin-top: 0;
+}
+ 
+#page-content .image-block-caption p:last-child {
+    margin-bottom: 0;
+}
+ 
+.image-block.image-block-right {
+    float: right;
+    clear: right;
+    margin: 0.25rem 0 1rem 2rem;
+}
+ 
+.image-block.image-block-left {
+    float: left;
+    margin: 0.25rem 2rem 1rem 0;
+}
+ 
+.image-block.image-block-center {
+    margin: 1rem auto;
+}
+ 
+@media (max-width: 900px) {
+    .scp-image-block.block-left,
+    .scp-image-block.block-right {
+        max-width: 100%;
+    }
+ 
+    .scp-clear-true.scp-image-block {
+        width: 100% !important;
+        float: none;
+        clear: both;
+        margin-left: auto;
+        margin-right: auto;
+    }
+ 
+}
+ 
+@media only screen and (max-width: 540px) {
+ 
+    .image-block:is(.image-block-right, .image-block-left) {
+        float: none;
+        margin: 0.1rem auto;
+    }
+ 
+}
+ 
+ 
+/* 旧要素 */
+ 
+ 
+.scp-image-block {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0.2rem 0.2rem 0.4rem rgba(var(--imageblock-shadow-color));
+    clear: both;
+    border: rgba(var(--imageblock-border-color)) var(--imageblock-border-width) solid;
+    max-width: 100%;
+}
+ 
+.scp-image-caption {
+    background: rgba(var(--imageblock-caption-background-color));
+    color: rgba(var(--imageblock-caption-text-color));
+    padding: 0.2em 1em;
+    text-align: center;
+    width: auto !important;
+}
+ 
+.scp-image-caption p {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+ 
+#page-content .scp-image-caption p:first-child {
+    margin-top: 0;
+}
+ 
+#page-content .scp-image-caption p:last-child {
+    margin-bottom: 0;
+}
+ 
+.scp-image-block.image-right {
+    float: right;
+    clear: right;
+    margin: 0.25rem 0 1rem 2rem;
+}
+ 
+.scp-image-block.image-left {
+    float: left;
+    margin: 0.25rem 2rem 1rem 0;
+}
+ 
+.scp-image-block.image-center {
+    margin: 1rem auto;
+}
+ 
+@media (max-width: 900px) {
+    .scp-image-block.block-left,
+    .scp-image-block.block-right {
+        max-width: 100%;
+    }
+ 
+    .scp-clear-true.scp-image-block {
+        width: 100% !important;
+        float: none;
+        clear: both;
+        margin-left: auto;
+        margin-right: auto;
+    }
+ 
+}
+ 
+@media only screen and (max-width: 540px) {
+ 
+    .scp-image-block:is(.image-right, .image-left) {
+        float: none;
+        margin: 0.1rem auto;
+    }
+ 
+}
