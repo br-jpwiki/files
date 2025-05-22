@@ -27,6 +27,10 @@ by Ambersight
     max-width: 100%;
 }
  
+.image-block img {
+    min-width: 100%;
+}
+ 
 .image-block-caption {
     background: rgba(var(--imageblock-caption-background-color));
     color: rgba(var(--imageblock-caption-text-color));
@@ -78,10 +82,6 @@ by Ambersight
         margin-right: auto;
     }
  
-    .image-block-clear-true.image-block img {
-        min-width: 100%;
-    }
- 
 }
  
 @media only screen and (max-width: 540px) {
@@ -104,6 +104,10 @@ by Ambersight
     clear: both;
     border: rgba(var(--imageblock-border-color)) var(--imageblock-border-width) solid;
     max-width: 100%;
+}
+ 
+.scp-image-block img {
+    min-width: 100%;
 }
  
 .scp-image-caption {
@@ -155,10 +159,6 @@ by Ambersight
         clear: both;
         margin-left: auto;
         margin-right: auto;
-    }
- 
-        .scp-clear-true.scp-image-block img {
-        min-width: 100%;
     }
  
 }
