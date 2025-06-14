@@ -1,11 +1,22 @@
-@import url("http://cdnjs.cloudflare.com/ajax/libs/cc-icons/1.2.1/css/cc-icons.min.css");
- 
+@import url("http://cdnjs.cloudflare.com/ajax/libs/cc-icons/1.2.1/css/cc-icons.min.css"); 
 /*
  
 From Super Liminal
 Wikidot Theme 2024
 by Ambersight
  
+*/
+
+/*
+
+several svg pictures are from
+icon-masks.css
+
+Source: https://scp-wiki-cdn.nyc3.cdn.digitaloceanspaces.com/theme/en/basalt/basalt-bedrock-min.css
+Author: Liryn and Placeholder McD
+Uploaded at: 2021
+CC BY-SA 3.0
+
 */
  
 :root {
