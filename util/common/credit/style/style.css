@@ -59,7 +59,7 @@ CC BY-SA 3.0
     --creditmodal-text-color: var(--popup-text-color);
     --creditmodal-title-background: var(--popup-title-background-color);
     --creditmodal-title-text-color: var(--popup-title-text-color);
-    --creditmodal-border: var(--popup-border-color);
+    --creditmodal-border-color: var(--popup-border-color);
     --creditmodal-rating-background-color: var(--background-color);
     --creditmodal-tip-color: var(--popup-tip-color);
     --creditmodal-tip-content: var(--popup-tip-content);
