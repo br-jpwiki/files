@@ -37,7 +37,6 @@ CC BY-SA 3.0
     --rating-module-button-mask: var(--vote-plus-mask);
     --rating-module-button-color: var(--rating-rateup-text-color);
  
-    --rating-background: rgba(var(--rating-background-color));
     --rating-font: var(--body-font);
  
     /* icon-masks.css からの引用 */
@@ -58,9 +57,10 @@ CC BY-SA 3.0
     --creditmodal-fader-blur: var(--general-blur);
     --creditmodal-background-color: var(--popup-background-color);
     --creditmodal-text-color: var(--popup-text-color);
-    --creditmodal-title-background: rgba(var(--popup-title-background-color));
+    --creditmodal-title-background: var(--popup-title-background-color);
     --creditmodal-title-text-color: var(--popup-title-text-color);
-    --creditmodal-border: rgba(var(--popup-border-color)) solid 0.2rem;
+    --creditmodal-border: var(--popup-border-color);
+    --creditmodal-rating-background-color: var(--background-color);
     --creditmodal-tip-color: var(--popup-tip-color);
     --creditmodal-tip-content: var(--popup-tip-content);
     --creditmodal-content-font-size: var(--content-font-size);
@@ -443,7 +443,7 @@ div.modalbox {
     flex-basis: calc(100% - 2rem);
     background: rgba(var(--creditmodal-background-color));
     box-sizing: border-box;
-    border: var(--creditmodal-border);
+    border: rgba(var(--creditmodal-border-color)) solid 0.2rem;
     color: rgba(var(--creditmodal-text-color));
     border-radius: 0;
     box-shadow: unset;
@@ -484,7 +484,7 @@ div.modalbox > hr {
 }
  
 div.modalbox .modalbox-title {
-    background: var(--creditmodal-title-background);
+    background: rgba(var(--creditmodal-title-background));
     padding: 0.5rem 1rem;
     text-align: left;
     display: block;
@@ -537,7 +537,7 @@ div.creditBottomRate {
 }
  
 div.creditBottomRate div.page-rate-widget-box {
-    background: rgba(var(--creditmodal-title-text-color));
+    background: rgba(var(--creditmodal-rating-background-color));
 }
  
 .creditRate.creditModule.no-rate ~ #u-credit-view .creditBottomRate > div:nth-of-type(2),
