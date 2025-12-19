@@ -312,7 +312,10 @@ by Ambersight
  
     /* Code Block Colors */
  
-    --code-block-default-color: var(--blockquote-text-color);
+    --code-block-background-color: var(--general-light-background-color);
+    --code-block-text-color: var(--general-light-text-color);
+    --code-block-border-color: var(--general-strong-border-color);
+    --code-block-default-color: var(--general-light-text-color);
     --code-block-code-color: var(--code-block-default-color);
     --code-block-brackets-color: var(--code-block-default-color);
     --code-block-comment-color: 64, 144, 64;
@@ -2748,6 +2751,13 @@ blockquote, .blockquote {
  
 /* Code Block */
  
+ 
+.code {
+    background: rgba(var(--code-block-background-color));
+    color: rgba(var(--code-block-text-color));
+    margin: 1rem 0;
+    border: rgba(var(--code-block-border-color)) dashed 0.15rem;
+}
  
 .hl-default {
     color: rgb(var(--code-block-default-color));
