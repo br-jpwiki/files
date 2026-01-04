@@ -1,0 +1,44 @@
+#page-content .wikisys--template-dialog {
+  width: 90%;
+  max-width: 500px;
+  margin: 2em auto;
+  padding: 2em;
+  background: #f9f9f9;
+  border-radius: 2em;
+  color: #301!important;
+  border: solid 1px #b7b7b7;
+}
+ 
+#page-content .wikisys--template-dialog > .wikisys--template-dialog-header {
+  position: relative;
+  line-height: 1.5;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 5px 0 5px 12px;
+}
+ 
+#page-content .wikisys--template-dialog > .wikisys--template-dialog-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  opacity: .2;
+  border-radius: 3px;
+  background: #aaaaaa;
+}
+ 
+#page-content .wikisys--template-dialog > .wikisys--template-dialog-content {
+  line-height: 1.75;
+  margin: 1em 0;
+}
+ 
+#page-content .wikisys--template-dialog > .wikisys--template-dialog-footer {
+  font-size: 90%;
+  margin-top: 2em;
+}
+ 
+#page-content .wikisys--template-dialog > .wikisys--template-dialog-infoarea {
+  margin-top: 2em;
+}
