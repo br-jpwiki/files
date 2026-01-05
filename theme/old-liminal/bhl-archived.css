@@ -8,7 +8,7 @@
         --theme-base: "black-highlighter";
         --theme-id: "black-highlighter";
         --theme-name: "nu-SCP Theme";
-        --logo-image: url(https://scp-wiki.wdfiles.com/local--files/component:pride-highlighter/lgbtqp_logo.svg);
+        --logo-image: url("../../image/logo.svg");
         --header-title: "SCP Foundation";
         --header-subtitle: "SECURE, CONTAIN, PROTECT";
         --body-font: Raleway, Arimo, Verdana, Geneva, sans-serif;
@@ -1464,7 +1464,7 @@
         position: absolute;
         top: 0;
         right: 0;
-        background-image: url(http://scptestwiki.wdfiles.com/local--files/squeeze%3Anav%3Aside/arr_drop.svg);
+        background-image: url("./arr_drop.svg");
         background-position: 50% 50%;
         background-repeat: no-repeat;
         width: 2rem;
