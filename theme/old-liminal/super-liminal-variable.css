@@ -1,3 +1,9 @@
+/*
+  From Super Liminal
+  Wikidot Theme 2024
+  by Ambersight
+*/
+ 
 :root {
   --background-color: var(--white-monochrome);
   --text-color: var(--black-monochrome);
@@ -18,7 +24,7 @@
   --general-dark-background-color: var(--dark-color-3);
   --general-dark-text-color: var(--light-color-1);
   --general-shadow-color: var(--text-color);
-    --general-light-border-color: var(--dark-color-3), 0.08;
+  --general-light-border-color: var(--dark-color-3), 0.08;
   --general-medium-border-color: var(--dark-color-3), 0.2;
   --general-strong-border-color: var(--dark-color-3), 0.5;
   --general-dark-border-color: var(--dark-color-3);
@@ -56,11 +62,3 @@
   --vote-minus-mask: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 872.37 190.02'%3E%3Crect x='444.99' y='103.81' width='190.02' height='872.37' transform='translate(-103.81 635.01) rotate(-90)'/%3E%3C/svg%3E");
   --vote-info-mask: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 432.1 810.25'%3E%3Cpath d='M324,917.73v-139H491.5V493.71H346V355.77H615v423H756.05v139ZM544.41,266.88q-36.17,0-57.76-21.46T465,187.18q0-36.78,21.61-58.24t57.76-21.46q36.15,0,57.76,21.46t21.6,58.24q0,36.78-21.6,58.24T544.41,266.88Z' transform='translate(-323.95 -107.48)'/%3E%3C/svg%3E");
 }
-
-/*
-
-From Super Liminal
-Wikidot Theme 2024
-by Ambersight
-
-*/
