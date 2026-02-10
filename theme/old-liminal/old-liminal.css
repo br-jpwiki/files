@@ -7,7 +7,7 @@
 */
  
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap");
-
+@import url("../../util/main/styles/fantasque-sans-mono.css");
 @import url("./normalized.css");
 @import url("./bhl-archived.css");
 @import url("../../util/common/wikisys/style/style.css");
@@ -16,7 +16,6 @@
 @import url("../../util/common/credit/style/style.css");
 @import url("../../util/common/image-block/style/style.css");
 @import url("../../modules/colstyle.min.css");
-@import url("../../util/main/styles/fantasque-sans-mono.css");
 @import url("../../util/main/styles/font-awesome.min.css");
  
 :root {
@@ -38,10 +37,10 @@
   --light-gray-monochrome: 160, 160, 160;
   --gray-monochrome: 72, 69, 60;
   --black-monochrome: 25, 20, 16;
+  --pale-accent: 165, 143, 96;
   --bright-accent: 140, 136, 126;
   --medium-accent: 72, 69, 60;
   --dark-accent: 140, 136, 126;
-  --pale-accent: 165, 143, 96;
  
   --swatch-topmenu-border-color: var(--medium-accent);
  
