@@ -100,7 +100,7 @@ by Ambersight
     --header-width: 65rem;
     --header-width-on-mobile: 100%;
     --header-margin: max(calc((100% - var(--header-width)) / 2), 0px);
-    --logo-image: url("../../image/logo.svg");
+    --logo-image: url("../../image/JP_Logo.svg");
     --header-title: "The Backrooms JP";
     --header-title-font-size: 2.65rem;
     --header-title-font-size-on-mobile: 1.6rem;
